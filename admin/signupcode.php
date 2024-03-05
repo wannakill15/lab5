@@ -9,21 +9,6 @@ if(isset($_POST['signup_btn'])) {
     $address = $_POST['address'];   
     $password = $_POST['password'];
 
-    // File upload handling
-    $profile_image = $_FILES['profile_image'];
-    $profile_image_name = $profile_image['name'];
-    $profile_image_tmp = $profile_image['tmp_name'];
-    $profile_image_size = $profile_image['size'];
-    $profile_image_error = $profile_image['error'];
-
-    // Check if a profile image is uploaded
-    if($profile_image_error === UPLOAD_ERR_OK) {
-        $profile_image_destination = 'uploads/' . $profile_image_name; // Change 'uploads/' to your desired upload directory
-        move_uploaded_file($profile_image_tmp, $profile_image_destination);
-    } else {
-        // Handle image upload error
-        $profile_image_destination = ''; // Set default image path or handle error accordingly
-    }
 
     // Check if the email already exists in the database
     $check_email_query = "SELECT * FROM user_profile WHERE email='$email' LIMIT 1 ";

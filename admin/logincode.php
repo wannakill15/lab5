@@ -55,7 +55,7 @@ else
 {
     $_SESSION['status'] = "Access Denied.!";
     var_dump($_SESSION['status']); // Debugging statement
-    header("Location: Loginform.php");
+    header("Location: loginform.php");
     exit(); // Ensure no further code execution after redirection
 }
 ?>

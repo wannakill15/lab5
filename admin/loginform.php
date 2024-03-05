@@ -9,6 +9,7 @@ if(isset($_SESSION['auth']))
 }
 
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <div class="section">
         <div class="container">
@@ -57,6 +58,17 @@ if(isset($_SESSION['auth']))
                             </form>
                             <div class="text-center">
                                 <p>Don't have an account? <a href="signupform.php" class="btn-sm">Sign Up</a></p>
+                            </div>
+                            <div>
+                            
+                                <a href="redirect.php" ><i class="bi bi-facebook"></i> Sign In with Facebook</a>
+                            
+                            <button>
+                                <a href="login-twitter.php"><i class="bi bi-twitter"></i> Sign In with Twitter</a>
+                            </button><br>
+                            <button>
+                                <a href="login-google.php"><i class="bi bi-google"></i> Sign In with Google+</a>
+                            </button>                           
                             </div>
                         </div> 
                     </div>
