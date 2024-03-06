@@ -59,16 +59,17 @@ if(isset($_SESSION['auth']))
                             <div class="text-center">
                                 <p>Don't have an account? <a href="signupform.php" class="btn-sm">Sign Up</a></p>
                             </div>
-                            <div>
-                            
-                                <a href="redirect.php" ><i class="bi bi-facebook"></i> Sign In with Facebook</a>
-                            
-                            <button>
-                                <a href="login-twitter.php"><i class="bi bi-twitter"></i> Sign In with Twitter</a>
-                            </button><br>
-                            <button>
-                                <a href="login-google.php"><i class="bi bi-google"></i> Sign In with Google+</a>
-                            </button>                           
+                            <div class="modal-footer">
+                                <div class="form-group" >
+                                <button>
+                                    <a href="login-facebook.php" ><i class="bi bi-facebook"></i> Sign In with Facebook</a>
+                                </button>
+                                </div>
+                                <div class="form-group">
+                                    <button>
+                                    <a href="google_login.php"><i class="bi bi-google"></i> Sign In with Google+</a>
+                                    </button>   
+                                </div>
                             </div>
                         </div> 
                     </div>

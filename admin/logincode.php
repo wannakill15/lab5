@@ -58,4 +58,3 @@ else
     header("Location: loginform.php");
     exit(); // Ensure no further code execution after redirection
 }
-?>
