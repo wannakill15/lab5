@@ -1,18 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
-
-// init configuration
-$clientID = '908459172487-ltp0g4sq7a1k1dj87tnj2jtd1pv5g7j3.apps.googleusercontent.com';
-$clientSecret = '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';
-$redirectUri = 'http://localhost:3000/admin/index.php';
-
-// create Client Request to access Google API
-$client = new Google_Client();
-$client->setClientId($clientID);
-$client->setClientSecret($clientSecret);
-$client->setRedirectUri($redirectUri);
-$client->addScope("email");
-$client->addScope("profile");
+require_once 'google_config.php';
 
 // authenticate code from Google OAuth Flow
 if (isset($_GET['code'])) {
@@ -39,7 +26,7 @@ if (isset($_GET['code'])) {
     $token = $userinfo['token'];
   } else {
     // user is not exists
-    $sql = "INSERT INTO users (email, full_name, picture, verifiedEmail, token) VALUES ('{$userinfo['email']}', '{$userinfo['full_name']}', '{$userinfo['picture']}', '{$userinfo['verifiedEmail']}', '{$userinfo['token']}')";
+    $sql = "INSERT INTO user_profile (email, full_name, picture, verifiedEmail, token) VALUES ('{$userinfo['email']}', '{$userinfo['full_name']}', '{$userinfo['picture']}', '{$userinfo['verifiedEmail']}', '{$userinfo['token']}')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
       $token = $userinfo['token'];
@@ -51,18 +38,15 @@ if (isset($_GET['code'])) {
 
   // save user data into session
   $_SESSION['user_token'] = $token;
-} else {
-  if (!isset($_SESSION['user_token'])) {
-    header("Location: google_index.php");
+}else{
+  if (!isset($_SESSION['user_token'])){
+    header("Location: google_config.php");
     die();
-  }
-
-  // checking if user is already exists in database
-  $sql = "SELECT * FROM users WHERE token ='{$_SESSION['user_token']}'";
-  $result = mysqli_query($conn, $sql);
-  if (mysqli_num_rows($result) > 0) {
-    // user is exists
-    $userinfo = mysqli_fetch_assoc($result);
-  }
+  } 
 }
 
+  $sql ="SELECT * FROM user_profile WHERE token = '{$_SESSION['user_token']}'";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+    $userinfo = mysqli_fetch_assoc($result);
+  }
