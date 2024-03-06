@@ -6,7 +6,7 @@ $username = "root";
 
 $password = "";
 
-$db_name = "adminLTE";
+$db_name = "adminlte";
 
 $conn = mysqli_connect($hostname,$username,$password,$db_name);
 

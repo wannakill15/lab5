@@ -1,5 +1,6 @@
 <?php
-require_once 'google_login.php';
+include_once 'google_config.php';
+
 
 if (isset($_SESSION['user_token'])) {
   header("Location: index.php");

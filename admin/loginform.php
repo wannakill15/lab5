@@ -67,7 +67,7 @@ if(isset($_SESSION['auth']))
                                 </div>
                                 <div class="form-group">
                                     <button>
-                                    <a href="google_login.php"><i class="bi bi-google"></i> Sign In with Google+</a>
+                                    <a href="google_index.php"><i class="bi bi-google"></i> Sign In with Google+</a>
                                     </button>   
                                 </div>
                             </div>

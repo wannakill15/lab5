@@ -18,7 +18,7 @@ if (isset($_GET['code'])) {
   ];
 
   // checking if user is already exists in database
-  $sql = "SELECT * FROM users WHERE email ='{$userinfo['email']}'";
+  $sql = "SELECT * FROM user_profile WHERE email ='{$userinfo['email']}' LIMIT 1";
   $result = mysqli_query($conn, $sql);
   if (mysqli_num_rows($result) > 0) {
     // user is exists
