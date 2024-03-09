@@ -62,12 +62,12 @@ if(isset($_SESSION['auth']))
                             <div class="modal-footer">
                                 <div class="form-group" >
                                 <button>
-                                    <a href="login-facebook.php" ><i class="bi bi-facebook"></i> Sign In with Facebook</a>
+                                    <a href="facebook_login.php" ><i class="bi bi-facebook"></i> Sign In with Facebook</a>
                                 </button>
                                 </div>
                                 <div class="form-group">
                                     <button>
-                                    <a href="google_index.php"><i class="bi bi-google"></i> Sign In with Google+</a>
+                                    <a href='google_index.php'><i class="bi bi-google"></i> Sign In with Google+</a>
                                     </button>   
                                 </div>
                             </div>
