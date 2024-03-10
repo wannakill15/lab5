@@ -8,6 +8,13 @@ if(isset($_SESSION['auth']))
     exit(0);
 }
 
+require_once 'facebook_config.php';
+
+$permissions = ['email']; // Optional permissions
+
+// Get the Facebook login URL
+$fb_login_url = $fb_helper->getLoginUrl(BASE_URL . '', $permissions);
+
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -62,7 +69,7 @@ if(isset($_SESSION['auth']))
                             <div class="modal-footer">
                                 <div class="form-group" >
                                 <button>
-                                    <a href="facebook_login.php" ><i class="bi bi-facebook"></i> Sign In with Facebook</a>
+                                    <a href="<?php echo $fb_login_url; ?>" ><i class="bi bi-facebook"></i> Sign In with Facebook</a>
                                 </button>
                                 </div>
                                 <div class="form-group">

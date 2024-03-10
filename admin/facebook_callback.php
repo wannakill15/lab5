@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-$fbappid = "2685607438261583";
-$fbappsecret = "7633dc4aa77f73ff3ede257b29884fec";
-$redirectURL = "http://localhost/admin/code.php"; // Updated redirect URL
+$fbappid = "5465614517048445";
+$fbappsecret = "ed88f7d2dad1f087361e64f9aff23ec3";
+$redirectURL = "http://localhost:3000/admin/code.php"; // Updated redirect URL
 $fbPermissions = ['email'];
 
 require_once __DIR__ . '/Facebook/autoload.php';

@@ -4,8 +4,8 @@ require_once(__DIR__.'/Facebook/autoload.php');
 define('APP_ID', '2685607438261583');
 define('APP_SECRET', '7633dc4aa77f73ff3ede257b29884fec');
 define('API_VERSION', 'v11.0');
-define('FB_BASE_URL', 'http://localhost/admin/'); // Make sure to include the trailing slash
-define('BASE_URL', 'http://localhost/admin/index.php'); // Make sure to include the full path
+define('FB_BASE_URL', 'http://localhost:3000/admin/'); // Make sure to include the trailing slash
+define('BASE_URL', 'http://localhost:3000/admin/index.php'); // Make sure to include the full path
 
 if(!session_id()){
     session_start();

@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$fbappid = "2685607438261583";
-$redirectURL = "http://localhost/admin/facebook_callback.php"; // Corrected redirect URL
+$fbappid = "5465614517048445";
+$redirectURL = "http://localhost:3000/admin/facebook_callback.php"; // Corrected redirect URL
 $fbPermissions = ['email'];
 
 require_once __DIR__ . '/Facebook/autoload.php';
