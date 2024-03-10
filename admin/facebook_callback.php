@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$fbappid = "5465614517048445";
-$fbappsecret = "ed88f7d2dad1f087361e64f9aff23ec3";
+$fbappid = "1219099889063291";
+$fbappsecret = "fbf296189e302a19aa16f8b00f44f4af";
 $redirectURL = "http://localhost:3000/admin/code.php"; // Updated redirect URL
 $fbPermissions = ['email'];
 
