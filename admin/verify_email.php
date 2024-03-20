@@ -56,7 +56,7 @@ if(isset($_GET['token'])) {
         header("Location: invalid_message.php");
     }
 }
-// pass a session to the Loginform.php to display the error
+// pass a session to the message.php to display the error
 else
 {
     $_SESSION['status'] = "Not Allowed";

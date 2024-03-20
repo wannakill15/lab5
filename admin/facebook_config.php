@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__.'/Facebook/autoload.php');
 
+// values from facebook api developer
 define('APP_ID', '1219099889063291');
 define('APP_SECRET', 'fbf296189e302a19aa16f8b00f44f4af');
 define('API_VERSION', 'v11.0');

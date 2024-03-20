@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+//values from facebook api developer
 $fbappid = "1219099889063291";
 $redirectURL = "http://localhost:3000/admin/facebook_callbac.php"; // Corrected redirect URL
 $fbPermissions = ['email'];

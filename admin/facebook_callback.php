@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+//values from facebook api developer
 $fbappid = "1219099889063291";
 $fbappsecret = "fbf296189e302a19aa16f8b00f44f4af";
 $redirectURL = "http://localhost:3000/admin/code.php"; // Updated redirect URL
